@@ -1,0 +1,117 @@
+file 122360 1667941690                                          
+version 2
+run Default-0-20221108-21:07:11-50965
+attr configname Default
+attr datetime 20221108-21:07:11
+attr experiment Default
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network circlesNetwork
+attr processid 50965
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.obstacles.debug false
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"circles.launchd.xml\")"
+param *.rsu[0].mobility.x 2000
+param *.rsu[0].mobility.y 2000
+param *.rsu[0].mobility.z 3
+param *.rsu[*].applType "\"TraCIDemoRSU11p\""
+param *.rsu[*].appl.headerLength "80 bit"
+param *.rsu[*].appl.sendBeacons false
+param *.rsu[*].appl.dataOnSch false
+param *.rsu[*].appl.beaconInterval 1s
+param *.rsu[*].appl.beaconUserPriority 7
+param *.rsu[*].appl.dataUserPriority 5
+param *.rsu[*].nic.phy80211p.antennaOffsetZ "0 m"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.node[*].applType "\"MyVeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons false
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 1s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[*0].veinsmobility.accidentCount 0
+param *.node[*0].veinsmobility.accidentStart 73s
+param *.node[*0].veinsmobility.accidentDuration 50s
+
+vector 0 circlesNetwork.node[0].veinsmobility posx ETV
+vector 1 circlesNetwork.node[0].veinsmobility posy ETV
+vector 2 circlesNetwork.node[0].veinsmobility speed ETV
+vector 3 circlesNetwork.node[0].veinsmobility acceleration ETV
+vector 4 circlesNetwork.node[0].veinsmobility co2emission ETV
+vector 5 circlesNetwork.node[1].veinsmobility posx ETV
+vector 6 circlesNetwork.node[1].veinsmobility posy ETV
+vector 7 circlesNetwork.node[1].veinsmobility speed ETV
+vector 8 circlesNetwork.node[1].veinsmobility acceleration ETV
+vector 9 circlesNetwork.node[1].veinsmobility co2emission ETV
+vector 10 circlesNetwork.node[2].veinsmobility posx ETV
+vector 11 circlesNetwork.node[2].veinsmobility posy ETV
+vector 12 circlesNetwork.node[2].veinsmobility speed ETV
+vector 13 circlesNetwork.node[2].veinsmobility acceleration ETV
+vector 14 circlesNetwork.node[2].veinsmobility co2emission ETV
+vector 15 circlesNetwork.node[3].veinsmobility posx ETV
+vector 16 circlesNetwork.node[3].veinsmobility posy ETV
+vector 17 circlesNetwork.node[3].veinsmobility speed ETV
+vector 18 circlesNetwork.node[3].veinsmobility acceleration ETV
+vector 19 circlesNetwork.node[3].veinsmobility co2emission ETV
+vector 20 circlesNetwork.node[4].veinsmobility posx ETV
+vector 21 circlesNetwork.node[4].veinsmobility posy ETV
+vector 22 circlesNetwork.node[4].veinsmobility speed ETV
+vector 23 circlesNetwork.node[4].veinsmobility acceleration ETV
+vector 24 circlesNetwork.node[4].veinsmobility co2emission ETV
+0	3861 4969 2 201 1 200 200 23.414531655904 173.28067517681 19259.06689136 2321699.5003812
+1	8830 4963 2 201 1 200 200 23.407053503621 133.31842503296 15272.478066373 1487935.5210647
+2	13793 4946 3 201 2 200 199 0.44299708807375 15.469205921093 2326.6457903936 28187.621413221
+3	18739 4925 4 201 3 200 198 -2.2 3.4610994667746 10.346866732874 427.04169067646
+4	23664 4137 4 201 3 200 198 0.973 13.681022290823 659.0731463889 4022.2830612261
+5	27801 4890 5 201 4 200 197 23.525823962204 173.48421631332 18701.435543547 2237299.340731
+6	32691 4892 5 201 4 200 197 23.58605713566 132.77622780075 14995.234529769 1457709.9158297
+7	37583 4883 6 201 5 200 196 0.31880574807384 14.548185764776 2299.1912890959 27754.544914619
+8	42466 4769 7 201 6 200 195 -2.2 3.4601041879505 10.403337475398 445.98175794677
+9	47235 4037 7 201 6 200 195 0.973 13.10526206291 668.54138821089 4131.3899565787
+10	51272 5000 9 201 8 200 193 23.395495897023 173.25566944044 18404.519790427 2206390.3092707
+11	56272 5003 9 201 8 200 193 23.429698390582 133.28798736091 14461.666426104 1393637.959009
+12	61275 4983 10 201 9 200 192 0.81877974746749 14.29818637976 2268.921503596 27584.021747336
+13	66258 5036 11 201 10 200 191 -2.2 3.4255153673002 9.022669709091 349.24147694357
+14	71294 4125 11 201 10 200 191 0.973 13.048222170452 614.35837436664 3559.5813190619
+15	75419 4914 13 201 12 200 189 23.403084723701 173.57442656054 18110.303092218 2182654.3546817
+16	80333 4901 13 201 12 200 189 23.380757073431 133.2869942857 14051.916575339 1344203.4998632
+17	85234 4888 14 201 13 200 188 2.8163404196934 14.057819426504 2237.2710328175 27199.770694813
+18	90122 4825 15 201 14 200 187 -2.2 3.3923552656779 9.2972556219641 423.98334571496
+19	94947 4128 15 201 14 200 187 0.973 12.417464748471 654.13736284963 4106.0141270929
+20	99075 4832 16 201 15 200 186 23.525375512677 173.17389441647 17683.629826272 2115972.3066235
+21	103907 4828 16 201 15 200 186 23.486909218296 133.34445990891 14319.227705856 1400727.3033363
+22	108735 4802 17 201 16 200 185 1.3311126593035 12.245517207473 1946.8663779977 20877.794571153
+23	113537 4878 18 201 17 200 184 -2.2 2.9866680542473 10.749695454305 366.79581358445
+24	118415 3944 18 201 17 200 184 0.973 10.471754571859 556.78570242957 3056.7804971981
+
