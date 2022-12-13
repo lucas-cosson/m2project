@@ -13,17 +13,10 @@ def main():
         client = carla.Client('localhost', 2000)
         client.set_timeout(20.0)
 
-        # world: carla.World = client.load_world('Town04_Opt')
-
         client.start_recorder("recording01.log", True)
 
         world: carla.World = client.get_world()
-
-        settings: carla.WorldSettings = world.get_settings()
-        settings.no_rendering_mode = False
-        world.apply_settings(settings)
-
-        print('SETTINGS: ', settings)
+        world.unload_map_layer(carla.MapLayer.All)
 
         spawn_points: List[carla.Transform] = world.get_map().get_spawn_points()
         spawn_point = spawn_points[0]
