@@ -3,6 +3,7 @@ Projet final du Master 2 Informatique
 
 ## Requis
 python=2.7, 3.6, 3.7, ou 3.8
+
 pip
 
 ## Installation
