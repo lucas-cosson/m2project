@@ -6,3 +6,5 @@ pygame
 matplotlib
 open3d
 Pillow
+shapely
+networkx

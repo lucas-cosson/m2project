@@ -6,18 +6,16 @@ import carla.libcarla as carla
 from agents.navigation.behavior_agent import BehaviorAgent
 
 # CONFIGURATION
-NB_VEHICLES = 10
+NB_VEHICLES = 5
 
 
 def main():
-    actor_list = []
+    vehicle_list = []
     agent_list = []
 
     client = carla.Client('localhost', 2000)
     client.set_timeout(20.0)
     try:
-        # client.start_recorder("recording01.log", True)
-
         world: carla.World = client.get_world()
 
         print(world.get_map().name)
@@ -47,7 +45,7 @@ def main():
         agent.set_destination(destination)
 
         agent_list.append(agent)
-        actor_list.append(vehicle_leader)
+        vehicle_list.append(vehicle_leader)
 
         for i in range(NB_VEHICLES - 1):
             vehicle_bp = world.get_blueprint_library().find('vehicle.audi.a2')
@@ -62,28 +60,26 @@ def main():
             agent.ignore_stop_signs(True)
 
             agent_list.append(agent)
-            actor_list.append(vehicle)
+            vehicle_list.append(vehicle)
 
             print('created %s' % vehicle.type_id)
-
-        while True:
-            for (vehicle, agent) in zip(actor_list, agent_list):
+            
+        isReached = False
+        while not isReached:
+            for (vehicle, agent) in zip(vehicle_list, agent_list):
                 if agent.done():
                     print("The target has been reached, stopping the simulation")
+                    isReached = True
                     break
-                if vehicle.id == vehicle_leader.id:
-                    vehicle.apply_control(agent.run_step())
-                else:
+                if vehicle.id != vehicle_leader.id:
                     agent.set_destination(vehicle_leader.get_location())
-                    vehicle.apply_control(agent.run_step())
+                    
+                vehicle.apply_control(agent.run_step())
 
 
     finally:
-        client.apply_batch([carla.command.DestroyActor(x) for x in actor_list])
-        # client.stop_recorder()
-        # print(client.show_recorder_file_info("recording01.log"))
-        for actor in actor_list:
-            actor.destroy()
+        for vehicle in vehicle_list:
+            vehicle.destroy()
         print('Finish simulation')
 
 
